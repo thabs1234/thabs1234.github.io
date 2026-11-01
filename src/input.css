@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #ecebe7;
+  --surface: #e1dfd9;
+  --ink: #38450f;
+  --muted: #5d683a;
+  --accent: #38450f;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'General Sans', sans-serif;
+}
+
+.display {
+  font-family: 'Gambarino', serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 0.92;
+}
+
+.section-gap {
+  margin-top: 160px;
+}

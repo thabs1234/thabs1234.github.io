@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Portfolio</title>
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=gambarino@400&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --bg: #ecebe7;
+      --surface: #e1dfd9;
+      --ink: #38450f;
+      --muted: #5d683a;
+      --accent: #38450f;
+    }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'General Sans', sans-serif;
+      min-height: 100vh;
+    }
+    .display {
+      font-family: 'Gambarino', serif;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 0.92;
+    }
+    .section-gap { margin-top: 160px; }
+    .center-text { text-align: center; }
+    .button-olive {
+      background: var(--accent);
+      color: var(--accent-ink);
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-family: 'General Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .button-olive:hover {
+      opacity: 0.9;
+    }
+    .sentence {
+      font-size: clamp(36px, 4.6vw, 68px);
+      line-height: 1.1;
+      font-family: 'Gambarino', serif;
+      color: white;
+      mix-blend-mode: difference;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Decorative background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-[#38450f] to-[#1a2508]"></div>
+    
+    <!-- Foreground content -->
+    <div class="relative z-10 text-center px-4">
+      <h1 class="display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight">
+        Portfolio
+      </h1>
+      <p class="mt-4 text-sm text-white/80 max-w-lg mx-auto">
+        Design direction: The sentence is the layout. Olive on bone.
+      </p>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div class="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+        <div class="w-1 h-3 bg-white/80 rounded-full mt-2"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section-gap bg-white/50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Features</h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <h3 class="text-xl font-bold mb-2">React & Tailwind</h3>
+          <p class="text-sm text-gray-600">Modern component library from 21st.dev Magic MCP</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <h3 class="text-xl font-bold mb-2">taste-skill</h3>
+          <p class="text-sm text-gray-600">Anti-slop frontend design principles</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <h3 class="text-xl font-bold mb-2">AI Generated</h3>
+          <p class="text-sm text-gray-600">Design direction: The sentence is the layout</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-[#38450f]">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Get in Touch</h2>
+      <p class="text-white/80 mb-8">Have a project in mind? Let's build something great together.</p>
+      <button onclick="alert('Contact form would open here')" class="button-olive text-sm px-8 py-3">
+        Start a Project
+      </button>
+    </div>
+  </section>
+</body>
+</html>
