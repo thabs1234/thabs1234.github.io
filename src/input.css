@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=General+Sans:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'General Sans', 'Inter', sans-serif;
+  color: #1a1a1a;
+  background-color: #faf8f5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scoped font for display headings */
+.font-display {
+  font-family: 'Playfair Display', 'Georgia', serif;
+}
+
+/* Water wave animation */
+@keyframes waterWave {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 40px; }
+}
+
+.water-wave {
+  animation: waterWave 8s ease-in-out infinite;
+  background-size: 100% 40px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  color: #1a3a4a;
+}
+
+h1 { font-size: 3.5rem; line-height: 1.1; }
+h2 { font-size: 2.5rem; line-height: 1.2; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.875rem; }
+
+@media (max-width: 768px) {
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 1.75rem; }
+}
+
+p {
+  line-height: 1.7;
+  color: #4a4a4a;
+}
+
+/* Smooth scrolling for anchor links */
+a {
+  color: #1a3a4a;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #4a7c6f;
+}
+
+/* Selection */
+::selection {
+  background-color: #4a7c6f;
+  color: #ffffff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a7c6f;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1a3a4a;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Staggered animation */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
